@@ -3,8 +3,7 @@
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-		<title>Spam SMS Detector</title>
-		<link rel="shortcut icon" href="{{ url_for('static', filename='spam-favicon.ico') }}">
+		<title>Detector de Spam SMS</title>
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
 	</head>
@@ -13,30 +12,26 @@
 
 		<!-- Website Title -->
 		<div class="container">
-			<h2 class='container-heading'><span>Spam Detector</span> for Short Message Service (SMS)</h2>
-	        	<div class='description'>
-				<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
-			</div>
-		</div>
+    		<h2 class='container-heading'><span>Detector de Spam</span> para Mensajes (SMS)</h2>
+            <div class='description'>
+    			<p>Una web app de  Machine Learning, Construida con Flask, Deployed usando Heroku.</p>
+    		</div>
+    	</div>
 
 		<!-- Result -->
 		<div class="results">
 			{% if prediction==1 %}
-				<h1>Prediction: <span class='danger'>Gotcha! This is a SPAM message.</span></h1>
-				<img class="gif" src="{{ url_for('static', filename='spam.webp') }}" alt="SPAM Image">
+				<h1>Predicción: <span class='danger'>Ajá! Esto es un mensaje de SPAM.</span></h1>
+				<img class="gif" src="https://raw.githubusercontent.com/Abhayparashar31/Spam-SMS-Classifier-Deployment/master/static/spam.webp" alt="SPAM Image">
 			{% elif prediction==0 %}
-				<h1>Prediction: <span class='safe'>Great! This is NOT a spam message.</span></h1>
-				<img class="gif" src="{{ url_for('static', filename='not-spam.webp') }}" alt="Not a spam image">
+				<h1>Predicción: <span class='safe'>Cool! Este NO es un mensaje de SPAM.</span></h1>
+				<img class="gif" src="https://raw.githubusercontent.com/Abhayparashar31/Spam-SMS-Classifier-Deployment/master/static/not-spam.webp" alt="Not a spam image">
 			{% endif %}
 		</div>
 
-		<!-- Footer -->
+
         <div class='footer'>
-            <div class="contact">
-                <a target="_blank" href="https://github.com/anujvyas/Spam-SMS-Classifier-Deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
-                <a target="_blank" href="https://www.linkedin.com/in/anujkvyas"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
-            </div>
-            <p class='footer-description'>Made with ❤️ by Anuj Vyas.</p>
+            <p class='footer-description'>Hecho con ❤️ by Josafath, Kevin y Francisco.</p>
         </div>
 
 	</body>
