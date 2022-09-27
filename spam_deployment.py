@@ -10,7 +10,7 @@ import pandas as pd
 import pickle
 
 # Loading the dataset
-df = pd.read_csv('Spam SMS Collection', sep='\t', names=['label', 'message'])
+df = pd.read_csv('Spam_SMS_Collection.csv', sep='\t', names=['label', 'message'])
 
 # Importing essential libraries for performing Natural Language Processing on 'SMS Spam Collection' dataset
 nltk.download('stopwords')
